@@ -2,17 +2,25 @@ package com.pluralsight.shapes;
 
 import com.pluralsight.Turtle;
 
-import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.geom.Point2D;
+
 
 public abstract class Shape {
 
 protected Turtle turtle;
-protected Point2D.Double location;
+protected Point location;
 protected Color color;
-protected Border border;
-//protected
+protected double border;
 
+    public Shape(Turtle turtle, Point location, Color color, double border) {
+        this.turtle = turtle;
+        this.location = location;
+        this.color = color;
+        this.border = border;
+    }
+
+    public abstract void paint();
 
 }
+
+
